@@ -1,0 +1,11 @@
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\bin\Debug\Nhom8.Service.dll
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\bin\Debug\Nhom8.Service.pdb
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\bin\Debug\Newtonsoft.Json.dll
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\bin\Debug\System.Net.Http.Formatting.dll
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\bin\Debug\Newtonsoft.Json.xml
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\bin\Debug\System.Net.Http.Formatting.xml
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\obj\Debug\Nhom8.Service.csprojResolveAssemblyReference.cache
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CoreCompileInputs.cache
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CopyComplete
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\obj\Debug\Nhom8.Service.dll
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\obj\Debug\Nhom8.Service.pdb

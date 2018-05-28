@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">huong dan su dung trang hien thi san pham</div>
+        <form>
+            <div class="col-md-4">
+                <h4>hướng dẫn hiển thị sản phâm</h4>
+                <div class="radio">
+                    <input type="radio" name="optracdio" value="" style="font-size:10px" /> chọn tất cả sản phẩm
+                </div>
+                <div class="radio">
+                    <h4>hiển thị sản phẩm theo Loại</h4>
+                    <label style="font-size:13px"> <input type="radio" name="optracdio" value="" style="font-size:10px" />Máy Tinh Dell </label> <br />
+                    <label style="font-size:13px"> <input type="radio" name="optracdio" value="" style="font-size:10px" />Máy Tinh HP </label><br />
+                    <label style="font-size:13px"> <input type="radio" name="optracdio" value="" style="font-size:10px" />Máy Tinh Appo </label><br />
+                </div>
+                <div class="radio">
+                    <input type="radio" name="optracdio" value="" style="font-size:10px" /> chọn tất cả sản phẩm
+                </div>
+                <button class="btn btn-primary">Hiển Thị Sản Phâm</button>
+            </div>
+        </form>
+        <div class="col-md-3"><div id="HienThiSanPham"></div></div>
+        <div class="col-md-2">huong dan su dung trang hien thi san pham</div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function () {
+            var HienThiSanPham = $('#HienThiSanPham');
+            var rows = '';
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:51208/api/sanpham/',
+                dataType: 'jsonp',
+                success: function (data) {
+                    $.each(data, function (index, val) {
+                        rows = val.TenSanPham;
+                        HienThiSanPham.append('<li>' + rows + '</li>')
+                    });
+                }
+            });
+        });
+</script>
+}

@@ -1,0 +1,10 @@
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\bin\Debug\Nhom8.WinForm.exe.config
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\bin\Debug\Nhom8.WinForm.exe
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\bin\Debug\Nhom8.WinForm.pdb
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csprojResolveAssemblyReference.cache
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.Form1.resources
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.Properties.Resources.resources
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.GenerateResource.cache
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.CoreCompileInputs.cache
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.exe
+D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.pdb
