@@ -12,3 +12,17 @@ D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.pdb
 D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.Migrations.PhienBan1.resources
 D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.GenerateResource.cache
 D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csprojResolveAssemblyReference.cache
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\bin\Debug\Nhom8.DataAccess.dll.config
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\bin\Debug\Nhom8.DataAccess.dll
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\bin\Debug\Nhom8.DataAccess.pdb
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\bin\Debug\EntityFramework.dll
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\bin\Debug\EntityFramework.xml
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csprojResolveAssemblyReference.cache
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.Migrations.PhienBan1.resources
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.GenerateResource.cache
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.CoreCompileInputs.cache
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.CopyComplete
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.dll
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.pdb

@@ -23,12 +23,12 @@ namespace Nhom8.WebAPI
                     routeTemplate: "api/{controller}/{id}",
                     defaults: new { id = RouteParameter.Optional } 
                 );
-                //config.Formatters.Remove(config.Formatters.XmlFormatter);
-                //config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/json"));
-                //config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
-                var jsonFormatter = new JsonpMediaTypeFormatter(config.Formatters.JsonFormatter);
-                config.Formatters.Insert(0, jsonFormatter); 
-             }
+            //config.Formatters.Remove(config.Formatters.XmlFormatter);
+            //config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/json"));
+            //config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
+            var jsonFormatter = new JsonpMediaTypeFormatter(config.Formatters.JsonFormatter);
+            config.Formatters.Insert(0, jsonFormatter);
+        }
         
     }
 }

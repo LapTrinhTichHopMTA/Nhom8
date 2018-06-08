@@ -8,3 +8,13 @@ D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.Genera
 D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.CoreCompileInputs.cache
 D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.exe
 D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.pdb
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\bin\Debug\Nhom8.WinForm.exe.config
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\bin\Debug\Nhom8.WinForm.exe
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\bin\Debug\Nhom8.WinForm.pdb
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csprojResolveAssemblyReference.cache
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.Form1.resources
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.Properties.Resources.resources
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.GenerateResource.cache
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.CoreCompileInputs.cache
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.exe
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.pdb

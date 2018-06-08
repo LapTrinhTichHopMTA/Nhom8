@@ -9,3 +9,14 @@ D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CoreCo
 D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CopyComplete
 D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\obj\Debug\Nhom8.Service.dll
 D:\LapTrinhTichHop_Nhom8_Mta\Nhom8.Service\obj\Debug\Nhom8.Service.pdb
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\bin\Debug\Nhom8.Service.dll
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\bin\Debug\Nhom8.Service.pdb
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\bin\Debug\Newtonsoft.Json.dll
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\bin\Debug\System.Net.Http.Formatting.dll
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\bin\Debug\Newtonsoft.Json.xml
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\bin\Debug\System.Net.Http.Formatting.xml
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\obj\Debug\Nhom8.Service.csprojResolveAssemblyReference.cache
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CoreCompileInputs.cache
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CopyComplete
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\obj\Debug\Nhom8.Service.dll
+D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\obj\Debug\Nhom8.Service.pdb
