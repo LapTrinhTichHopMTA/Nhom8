@@ -21,6 +21,7 @@ namespace Nhom8.WebAPI.Controllers
             return sanPhamClient.HienThiDanhSachSanPham(); 
         }
 
+
         public IHttpActionResult GetId(int MaSanPham)
         {
             SanPham_BUS sanPhamClient = new SanPham_BUS(); 

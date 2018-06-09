@@ -20,3 +20,14 @@ D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\obj\Debug\Nhom8
 D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CopyComplete
 D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\obj\Debug\Nhom8.Service.dll
 D:\Lập TrìnhTích Hợp Báo Cáo Chính Thức\Nhom8.Service\obj\Debug\Nhom8.Service.pdb
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\Nhom8.Service.dll
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\Nhom8.Service.pdb
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\Newtonsoft.Json.dll
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\System.Net.Http.Formatting.dll
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\Newtonsoft.Json.xml
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\System.Net.Http.Formatting.xml
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.csprojResolveAssemblyReference.cache
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CoreCompileInputs.cache
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CopyComplete
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.dll
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.pdb

@@ -11,21 +11,6 @@ namespace Nhom8.DataAccess.Models.SanPham
 {
     public class SanPham_OBJ
     {
-        public SanPham_OBJ(Base.SanPham item)
-        {
-            MaSanPham = item.MaSanPham;
-            TenSanPham = item.TenSanPham;
-            SoLuongTon = item.SoLuongTon;
-            DonGia = item.DonGia;
-            MoTa = item.MoTa;
-            AnhBia = item.AnhBia;
-            MaLoaiSanPham = item.MaLoaiSanPham;
-            MaNhaSanXuat = item.MaLoaiSanPham;
-        }
-        public SanPham_OBJ()
-        {
-
-        }
         public int MaSanPham { get; set; }
 
         [StringLength(100)]
