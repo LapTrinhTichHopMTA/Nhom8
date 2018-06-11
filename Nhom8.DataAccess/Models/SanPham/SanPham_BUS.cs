@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Nhom8.DataAccess.Models.LoaiSanPham;
 using System.Data.Entity;
+using System.Linq.Expressions;
 
 namespace Nhom8.DataAccess.Models.SanPham
 {
@@ -31,7 +32,7 @@ namespace Nhom8.DataAccess.Models.SanPham
                         MaLoaiSanPham = item.MaLoaiSanPham,
                         MaNhaSanXuat = item.MaLoaiSanPham,
                         HienThi = item.HienThi
-               
+
                     });
                 }
                 return DanhSach;
@@ -42,6 +43,66 @@ namespace Nhom8.DataAccess.Models.SanPham
             }
         }
 
+        
+
+
+        public IEnumerable<SanPham_OBJ> TimKiemThongTinSanPham(string TuKhoa)
+        {
+            try
+            {
+                TuKhoa = TuKhoa.Trim(); 
+                MayTinhDbContext db = new MayTinhDbContext();
+                IList<SanPham_OBJ> DanhSach = new List<SanPham_OBJ>();
+               
+                if (string.IsNullOrEmpty(TuKhoa)== false)
+                {
+                    var query = from sanphan in db.SanPhams
+                                where sanphan.TenSanPham.Trim() == TuKhoa ||
+                                sanphan.NhaSanXuat.TenNhaSanXuat.Trim() == TuKhoa ||
+                                sanphan.LoaiSanPham.TenLoaiSanPham.Trim() == TuKhoa
+                                select sanphan;
+                    foreach (var item in query)
+                    {
+                        DanhSach.Add(new SanPham_OBJ()
+                        {
+                            MaSanPham = item.MaSanPham,
+                            TenSanPham = item.TenSanPham,
+                            SoLuongTon = item.SoLuongTon,
+                            DonGia = item.DonGia,
+                            MoTa = item.MoTa,
+                            AnhBia = item.AnhBia,
+                            MaLoaiSanPham = item.MaLoaiSanPham,
+                            MaNhaSanXuat = item.MaLoaiSanPham,
+                            HienThi = item.HienThi
+
+                        });
+                    }
+                    return DanhSach;
+                }
+                var querys = db.SanPhams.ToList();
+                foreach (var item in querys)
+                {
+                    DanhSach.Add(new SanPham_OBJ()
+                    {
+                        MaSanPham = item.MaSanPham,
+                        TenSanPham = item.TenSanPham,
+                        SoLuongTon = item.SoLuongTon,
+                        DonGia = item.DonGia,
+                        MoTa = item.MoTa,
+                        AnhBia = item.AnhBia,
+                        MaLoaiSanPham = item.MaLoaiSanPham,
+                        MaNhaSanXuat = item.MaLoaiSanPham,
+                        HienThi = item.HienThi
+
+                    });
+                }
+                return DanhSach;
+            }
+            catch
+            {
+                return null;
+            }
+        }
         public SanPham_OBJ HienThiSanPhamTheoID(int MaSanPham)
         {
 

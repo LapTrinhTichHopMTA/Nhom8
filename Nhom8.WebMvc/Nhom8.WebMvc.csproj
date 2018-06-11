@@ -227,6 +227,9 @@
     <Content Include="App\Components\ThongSoKyThuat\ThongSoKyThuatListView.html" />
     <Content Include="App\Components\TrangChu\TrangChuController.js" />
     <Content Include="App\Components\TrangChu\TrangChuView.html" />
+    <Content Include="App\Shared\directives\asDateDirective.js" />
+    <Content Include="App\Shared\directives\pagerDirective.html" />
+    <Content Include="App\Shared\directives\pagerDirective.js" />
     <Content Include="App\Shared\filters\statusFilter.js" />
     <Content Include="App\Shared\Module\maytinh.common.js" />
     <Content Include="App\Shared\Services\apiService.js" />
