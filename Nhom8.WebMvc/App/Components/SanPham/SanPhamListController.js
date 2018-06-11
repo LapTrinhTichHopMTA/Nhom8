@@ -21,7 +21,7 @@
             var chuoiketnoi = '';
             
             var chuoiketnoi1 = 'http://localhost:51208/api/sanpham?trang=' + page + '&SoBanGhi=5&TuKhoa=' + $scope.keyword; 
-            var chuoiketnoi2 = 'http://localhost:51208/api/sanpham?trang=' + page + '&SoBanGhi=5'
+            var chuoiketnoi2 = 'http://localhost:51208/api/sanpham?trang=' + page + '&SoBanGhi=1'
 
 
             if ($scope.keyword == null) {
