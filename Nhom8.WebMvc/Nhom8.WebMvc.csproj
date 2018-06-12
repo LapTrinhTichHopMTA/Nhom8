@@ -177,7 +177,7 @@
     <Content Include="App\Components\KhachHang\KhachHangEditController.js" />
     <Content Include="App\Components\KhachHang\KhachHangEditView.html" />
     <Content Include="App\Components\KhachHang\KhachHangListView.html" />
-    <Content Include="App\Components\LoaiSanPham\LoaiSanPham.routes.js" />
+    <Content Include="App\Components\LoaiSanPham\LoaiSanPham.module.js" />
     <Content Include="App\Components\LoaiSanPham\LoaiSanPhamAddController.js" />
     <Content Include="App\Components\LoaiSanPham\LoaiSanPhamAddView.html" />
     <Content Include="App\Components\LoaiSanPham\LoaiSanPhamEditController.js" />
@@ -212,12 +212,6 @@
     <Content Include="App\Components\SanPham\SanPhamEditView.html" />
     <Content Include="App\Components\SanPham\SanPhamListController.js" />
     <Content Include="App\Components\SanPham\SanPhamListView.html" />
-    <Content Include="App\Components\TaiKhoan\TaiKhoanAddController.js" />
-    <Content Include="App\Components\TaiKhoan\TaiKhoanAddView.html" />
-    <Content Include="App\Components\TaiKhoan\TaiKhoanEditController.js" />
-    <Content Include="App\Components\TaiKhoan\TaiKhoanEditView.html" />
-    <Content Include="App\Components\TaiKhoan\TaiKhoanListController.js" />
-    <Content Include="App\Components\TaiKhoan\TaiKhoanListView.html" />
     <Content Include="App\Components\ThongSoKyThuat\ThongSoKyThuat.routes.js" />
     <Content Include="App\Components\ThongSoKyThuat\ThongSoKyThuatAddController.js" />
     <Content Include="App\Components\ThongSoKyThuat\ThongSoKyThuatAddView.html" />

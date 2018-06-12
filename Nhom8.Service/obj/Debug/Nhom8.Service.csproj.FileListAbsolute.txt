@@ -26,7 +26,6 @@ D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\Newtonsoft.Json.dll
 D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\System.Net.Http.Formatting.dll
 D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\Newtonsoft.Json.xml
 D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\bin\Debug\System.Net.Http.Formatting.xml
-D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.csprojResolveAssemblyReference.cache
 D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CoreCompileInputs.cache
 D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CopyComplete
 D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.dll

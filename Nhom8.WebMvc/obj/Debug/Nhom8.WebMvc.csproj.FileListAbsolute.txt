@@ -218,7 +218,6 @@ D:\Lap Trinh Tich Hơp MTA\Nhom8.WebMvc\bin\Microsoft.AI.DependencyCollector.xml
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WebMvc\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WebMvc\bin\Microsoft.AI.WindowsServer.xml
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WebMvc\bin\Microsoft.AI.Web.xml
-D:\Lap Trinh Tich Hơp MTA\Nhom8.WebMvc\obj\Debug\Nhom8.WebMvc.csprojResolveAssemblyReference.cache
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WebMvc\obj\Debug\Nhom8.WebMvc.csproj.CoreCompileInputs.cache
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WebMvc\obj\Debug\Nhom8.WebMvc.csproj.CopyComplete
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WebMvc\obj\Debug\Nhom8.WebMvc.dll

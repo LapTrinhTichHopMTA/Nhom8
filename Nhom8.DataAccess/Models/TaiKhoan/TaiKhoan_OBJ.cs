@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Nhom8.DataAccess.Models.TaiKhoan
 {
-    class TaiKhoan_OBJ
+    public class TaiKhoan_OBJ
     {
         [StringLength(50)]
         public string TenTaiKhoan { get; set; }

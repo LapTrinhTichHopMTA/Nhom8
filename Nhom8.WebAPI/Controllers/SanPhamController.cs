@@ -15,18 +15,23 @@ namespace Nhom8.WebAPI.Controllers
     public class SanPhamController : ApiController
     {
         [HttpGet]
+
+        public IEnumerable<SanPham_OBJ> GetAll()
+        {
+            SanPham_BUS bus = new SanPham_BUS();
+            return bus.HienThiDanhSachSanPham();
+        }
+
         //[Route("getall")]
         public PhanTrang<SanPham_OBJ> GetAll(int trang, int SoBanGhi)
         {
             int DoDaiDanhSach = 0;
 
-            SanPham_BUS sanPhamClient = new SanPham_BUS();
-            var DanhSach = sanPhamClient.HienThiDanhSachSanPham();
+            SanPham_BUS bus = new SanPham_BUS();
+            var DanhSach = bus.HienThiDanhSachSanPham();
             DoDaiDanhSach = DanhSach.Count();
 
             var TrangSanPham = DanhSach.OrderByDescending(x => x.MaSanPham).Skip(trang * SoBanGhi).Take(SoBanGhi);
-
-
             var PhanTrang = new PhanTrang<SanPham_OBJ>()
             {
                 DanhSach = TrangSanPham,
@@ -43,17 +48,11 @@ namespace Nhom8.WebAPI.Controllers
         {
             int DoDaiDanhSach = 0; 
 
-            SanPham_BUS sanPhamClient = new SanPham_BUS();
-            var DanhSach = sanPhamClient.TimKiemThongTinSanPham(TuKhoa);
-            //if(DanhSach == null)
-            //{
-            //    DoDaiDanhSach = 0;
-            //    return null; 
-            //}
+            SanPham_BUS bus = new SanPham_BUS();
+            var DanhSach = bus.TimKiemThongTinSanPham(TuKhoa);
             DoDaiDanhSach = DanhSach.Count();
 
             var TrangSanPham = DanhSach.OrderByDescending(x => x.MaSanPham).Skip(trang * SoBanGhi).Take(SoBanGhi);
-
 
             var PhanTrang = new PhanTrang<SanPham_OBJ>()
             {
