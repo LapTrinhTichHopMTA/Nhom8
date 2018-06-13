@@ -28,3 +28,13 @@ D:\Lap Trinh Tich Hơp MTA\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.CoreComp
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.exe
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.pdb
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csprojResolveAssemblyReference.cache
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\bin\Debug\Nhom8.WinForm.exe.config
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\bin\Debug\Nhom8.WinForm.exe
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\bin\Debug\Nhom8.WinForm.pdb
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csprojResolveAssemblyReference.cache
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.Form1.resources
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.Properties.Resources.resources
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.GenerateResource.cache
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.CoreCompileInputs.cache
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.exe
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.pdb

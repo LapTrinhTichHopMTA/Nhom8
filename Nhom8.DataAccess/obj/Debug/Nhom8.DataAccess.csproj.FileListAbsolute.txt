@@ -40,3 +40,17 @@ D:\Lap Trinh Tich Hơp MTA\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.Co
 D:\Lap Trinh Tich Hơp MTA\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.dll
 D:\Lap Trinh Tich Hơp MTA\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.pdb
 D:\Lap Trinh Tich Hơp MTA\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csprojResolveAssemblyReference.cache
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\bin\Debug\Nhom8.DataAccess.dll.config
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\bin\Debug\Nhom8.DataAccess.dll
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\bin\Debug\Nhom8.DataAccess.pdb
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\bin\Debug\EntityFramework.dll
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\bin\Debug\EntityFramework.xml
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csprojResolveAssemblyReference.cache
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.Migrations.PhienBan1.resources
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.GenerateResource.cache
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.CoreCompileInputs.cache
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.CopyComplete
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.dll
+D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.pdb
