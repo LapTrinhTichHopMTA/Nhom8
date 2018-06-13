@@ -1,3 +1,4 @@
-﻿(function () {
-    angular.module('MayTinh.Common',['ui.router',''])
-})(); 
+﻿
+(function () {
+    angular.module('MayTinh.Common', ['ui.router'])
+})();

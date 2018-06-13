@@ -2,8 +2,7 @@
 
 
 (function () {
-    angular.module('BanMayTinh', [
-        'MayTinh.ThongSoKyThuat',
+    angular.module('BanMayTinh',[
         'MayTinh.TaiKhoan',
         'MayTinh.NhaSanXuat',
         'MayTinh.LoaiSanPham',

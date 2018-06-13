@@ -40,9 +40,9 @@
                 $scope.page = result.data.Trang;
                 $scope.pagesCount = result.data.SoTrang;
                 $scope.totalCount = result.data.SoBanGhi;
-                if (result.data.DoDai == 0) {
-                    ThongBaoService.displayWarning('Không Có Bản Ghi Nào Được Tìm Thầy');
-                }
+                //if (result.data.DoDai == 0) {
+                //    ThongBaoService.displayWarning('Không Có Bản Ghi Nào Được Tìm Thầy');
+                //}
 
             }, function () {
                 console.log('Loi Load Du Lieu'); 
