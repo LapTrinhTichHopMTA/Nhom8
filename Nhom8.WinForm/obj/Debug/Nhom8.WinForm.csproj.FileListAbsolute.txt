@@ -27,3 +27,4 @@ D:\Lap Trinh Tich Hơp MTA\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.Generate
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csproj.CoreCompileInputs.cache
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.exe
 D:\Lap Trinh Tich Hơp MTA\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.pdb
+D:\Lap Trinh Tich Hơp MTA\Nhom8.WinForm\obj\Debug\Nhom8.WinForm.csprojResolveAssemblyReference.cache

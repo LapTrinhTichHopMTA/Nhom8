@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Nhom8.DataAccess.Base;
 using Nhom8.DataAccess.Models.SanPham;
 using Nhom8.WebAPI.Models;
 
@@ -44,9 +46,9 @@ namespace Nhom8.WebAPI.Controllers
 
 
         //[Route("getall")]
-        public PhanTrang<SanPham_OBJ> GetAll(int trang , int SoBanGhi, string TuKhoa)
+        public PhanTrang<SanPham_OBJ> GetAll(int trang, int SoBanGhi, string TuKhoa)
         {
-            int DoDaiDanhSach = 0; 
+            int DoDaiDanhSach = 0;
 
             SanPham_BUS bus = new SanPham_BUS();
             var DanhSach = bus.TimKiemThongTinSanPham(TuKhoa);
@@ -59,15 +61,15 @@ namespace Nhom8.WebAPI.Controllers
                 DanhSach = TrangSanPham,
                 Trang = trang,
                 SoBanGhi = SoBanGhi,
-                SoTrang = (int)Math.Ceiling((decimal)DoDaiDanhSach/ SoBanGhi)
-            }; 
-            return PhanTrang ; 
+                SoTrang = (int)Math.Ceiling((decimal)DoDaiDanhSach / SoBanGhi)
+            };
+            return PhanTrang;
         }
 
 
         public IHttpActionResult GetId(int MaSanPham)
         {
-            SanPham_BUS sanPhamClient = new SanPham_BUS(); 
+            SanPham_BUS sanPhamClient = new SanPham_BUS();
 
             if (sanPhamClient.HienThiSanPhamTheoID(MaSanPham) == null)
             {
@@ -77,7 +79,7 @@ namespace Nhom8.WebAPI.Controllers
             return Ok(sanPhamClient.HienThiSanPhamTheoID(MaSanPham));
         }
 
-        ///POST: api/NhanViens
+       
         [ResponseType(typeof(SanPham_OBJ))]
         public IHttpActionResult PostNhanVien(SanPham_OBJ obj)
         {
@@ -88,25 +90,73 @@ namespace Nhom8.WebAPI.Controllers
             SanPham_BUS bus = new SanPham_BUS();
 
             bool kt = bus.ThemMoiSanPham(obj);
+            bus.save(); 
 
             if (kt == true)
             {
                 return CreatedAtRoute("DefaultApi", new { id = obj.MaLoaiSanPham }, obj);
             }
-            else 
+            else
             {
                 return BadRequest(ModelState);
             }
         }
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutLoaiSanPham(int id, SanPham_OBJ obj)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != obj.MaSanPham)
+            {
+                return BadRequest();
+            }
+            SanPham_BUS bus = new SanPham_BUS();
+            bool b = bus.CapNhapSanPham(obj);
+            try
+            {
+                bus.save();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!bus.SanPhamExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+        private MayTinhDbContext db = new MayTinhDbContext();
+
+       
+
+        [HttpDelete]
+        [ResponseType(typeof(SanPham_OBJ))]
+        public IHttpActionResult Delete(int MaSanPham)
+        {
+
+            SanPham_BUS bus = new SanPham_BUS();
+
+            if (bus.XoaSanPham(MaSanPham) == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(bus.XoaSanPham(MaSanPham));
+
+            }
         }
 
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
-        }
+
 
     }
 }

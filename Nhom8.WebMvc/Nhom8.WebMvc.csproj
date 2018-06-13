@@ -212,7 +212,14 @@
     <Content Include="App\Components\SanPham\SanPhamEditView.html" />
     <Content Include="App\Components\SanPham\SanPhamListController.js" />
     <Content Include="App\Components\SanPham\SanPhamListView.html" />
-    <Content Include="App\Components\ThongSoKyThuat\ThongSoKyThuat.routes.js" />
+    <Content Include="App\Components\TaiKhoans\TaiKhoans.Module.js" />
+    <Content Include="App\Components\TaiKhoans\NhaSanXuatAddController.js" />
+    <Content Include="App\Components\TaiKhoans\NhaSanXuatAddView.html" />
+    <Content Include="App\Components\TaiKhoans\NhaSanXuatEditController.js" />
+    <Content Include="App\Components\TaiKhoans\NhaSanXuatEditView.html" />
+    <Content Include="App\Components\TaiKhoans\TaiKhoansListController.js" />
+    <Content Include="App\Components\TaiKhoans\TaiKhoansListView.html" />
+    <Content Include="App\Components\ThongSoKyThuat\ThongSoKyThuat.Module.js" />
     <Content Include="App\Components\ThongSoKyThuat\ThongSoKyThuatAddController.js" />
     <Content Include="App\Components\ThongSoKyThuat\ThongSoKyThuatAddView.html" />
     <Content Include="App\Components\ThongSoKyThuat\ThongSoKyThuatEditController.js" />
@@ -227,6 +234,7 @@
     <Content Include="App\Shared\filters\statusFilter.js" />
     <Content Include="App\Shared\Module\maytinh.common.js" />
     <Content Include="App\Shared\Services\apiService.js" />
+    <Content Include="App\Shared\Services\ThongBaoService.js" />
     <Content Include="Assets\Admin\bootstrap\css\bootstrap.css" />
     <Content Include="Assets\Admin\bootstrap\css\bootstrap.min.css" />
     <Content Include="Assets\Admin\bootstrap\fonts\glyphicons-halflings-regular.svg" />
@@ -5726,6 +5734,10 @@
     <Content Include="Assets\Admin\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="Assets\Admin\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Assets\Admin\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Assets\Admin\plugins\toastr\toastr.css" />
+    <Content Include="Assets\Admin\plugins\toastr\toastr.js" />
+    <Content Include="Assets\Admin\plugins\toastr\toastr.min.css" />
+    <Content Include="Assets\Admin\plugins\toastr\toastr.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -8856,6 +8868,12 @@
     <Content Include="Assets\Admin\plugins\datatables\extensions\TableTools\Readme.md" />
     <Content Include="Assets\Admin\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Assets\Admin\plugins\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="Assets\Admin\plugins\toastr\.bower.json" />
+    <Content Include="Assets\Admin\plugins\toastr\bower.json" />
+    <Content Include="Assets\Admin\plugins\toastr\README.md" />
+    <Content Include="Assets\Admin\plugins\toastr\toastr.js.map" />
+    <Content Include="Assets\Admin\plugins\toastr\toastr.less" />
+    <Content Include="Assets\Admin\plugins\toastr\toastr.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

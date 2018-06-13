@@ -135,9 +135,9 @@ namespace Nhom8.WebAPI.Controllers
 
         // DELETE: api/LoaiSanPhams/5
         [ResponseType(typeof(LoaiSanPham))]
-        public IHttpActionResult DeleteLoaiSanPham(int id)
+        public IHttpActionResult DeleteLoaiSanPham(int Ma)
         {
-            LoaiSanPham loaiSanPham = db.LoaiSanPhams.Find(id);
+            LoaiSanPham loaiSanPham = db.LoaiSanPhams.Find(Ma);
             if (loaiSanPham == null)
             {
                 return NotFound();

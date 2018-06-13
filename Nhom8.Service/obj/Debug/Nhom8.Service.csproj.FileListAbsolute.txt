@@ -30,3 +30,4 @@ D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CoreComp
 D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.csproj.CopyComplete
 D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.dll
 D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.pdb
+D:\Lap Trinh Tich Hơp MTA\Nhom8.Service\obj\Debug\Nhom8.Service.csprojResolveAssemblyReference.cache
