@@ -2,7 +2,15 @@
 
 
 (function () {
-    angular.module('BanMayTinh', ['MayTinh.SanPham','MayTinh.Common']).config(config); 
+    angular.module('BanMayTinh', [
+        'MayTinh.ThongSoKyThuat',
+        'MayTinh.TaiKhoan',
+        'MayTinh.NhaSanXuat',
+        'MayTinh.LoaiSanPham',
+        'MayTinh.SanPham',
+        'MayTinh.Common'
+
+    ]).config(config); 
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 

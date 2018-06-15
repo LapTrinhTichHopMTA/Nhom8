@@ -26,7 +26,7 @@ namespace Nhom8.DataAccess.Models.SanPham
                 MoTa = item.MoTa,
                 AnhBia = item.AnhBia,
                 MaLoaiSanPham = item.MaLoaiSanPham,
-                MaNhaSanXuat = item.MaLoaiSanPham,
+                MaNhaSanXuat = item.MaNhaSanXuat,
                 HienThi = item.HienThi
             };
             return obj;
@@ -43,7 +43,7 @@ namespace Nhom8.DataAccess.Models.SanPham
                 MoTa = obj.MoTa,
                 AnhBia = obj.AnhBia,
                 MaLoaiSanPham = obj.MaLoaiSanPham,
-                MaNhaSanXuat = obj.MaLoaiSanPham,
+                MaNhaSanXuat = obj.MaNhaSanXuat,
                 HienThi = obj.HienThi
             };
             return bs; 
@@ -82,6 +82,80 @@ namespace Nhom8.DataAccess.Models.SanPham
                             where sanphan.TenSanPham.Trim() == TuKhoa ||
                             sanphan.NhaSanXuat.TenNhaSanXuat.Trim() == TuKhoa ||
                             sanphan.LoaiSanPham.TenLoaiSanPham.Trim() == TuKhoa
+                            select sanphan;
+
+                foreach (var item in query)
+                {
+                    DanhSach.Add(Mapper(item));
+                }
+                return DanhSach;
+
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<SanPham_OBJ> TimKiemThongTinTheoMaLoaiSanPham(int MaLoaiSanPham)
+        {
+            try
+            {
+
+
+                IList<SanPham_OBJ> DanhSach = new List<SanPham_OBJ>();
+                var query = from sanphan in db.SanPhams
+                            where sanphan.MaLoaiSanPham == MaLoaiSanPham 
+                            select sanphan;
+
+                foreach (var item in query)
+                {
+                    DanhSach.Add(Mapper(item));
+                }
+                return DanhSach;
+
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+
+        public IEnumerable<SanPham_OBJ> TimKiemThongTinTheoNhaSanXuat(int MaNhaSanXuat)
+        {
+            try
+            {
+
+
+                IList<SanPham_OBJ> DanhSach = new List<SanPham_OBJ>();
+                var query = from sanphan in db.SanPhams
+                            where sanphan.MaNhaSanXuat==MaNhaSanXuat
+                            select sanphan;
+
+                foreach (var item in query)
+                {
+                    DanhSach.Add(Mapper(item));
+                }
+                return DanhSach;
+
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+
+        public IEnumerable<SanPham_OBJ> TimKiemThongTinTheoNhaSanXuatVsLoaiSanPham(int MaNhaSanXuat,int LoaiSanPham)
+        {
+            try
+            {
+
+
+                IList<SanPham_OBJ> DanhSach = new List<SanPham_OBJ>();
+                var query = from sanphan in db.SanPhams
+                            where sanphan.MaNhaSanXuat == MaNhaSanXuat && sanphan.MaLoaiSanPham == LoaiSanPham
                             select sanphan;
 
                 foreach (var item in query)

@@ -118,19 +118,15 @@ namespace Nhom8.WebAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/LoaiSanPhams
-        [ResponseType(typeof(LoaiSanPham))]
-        public IHttpActionResult PostLoaiSanPham(LoaiSanPham loaiSanPham)
+        [HttpPost]
+        public void LoaiSanPham([FromBody]LoaiSanPham loaiSanPham)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return;
             }
-
             db.LoaiSanPhams.Add(loaiSanPham);
             db.SaveChanges();
-
-            return CreatedAtRoute("DefaultApi", new { id = loaiSanPham.MaLoaiSanPham }, loaiSanPham);
         }
 
         // DELETE: api/LoaiSanPhams/5

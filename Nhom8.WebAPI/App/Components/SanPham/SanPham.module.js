@@ -10,6 +10,19 @@
             url: "/SanPhams",
             templateUrl: "/App/Components/SanPham/SanPhamListView.html",
             controller: "SanPhamListController"
+
+        }); 
+
+        $stateProvider.state('addSanPhams', {
+            url: "/addSanPhams",
+            templateUrl: "/App/Components/SanPham/SanPhamAddView.html",
+            controller: "SanPhamAddController"
+        }); 
+
+        $stateProvider.state('PutSanPham', {
+            url: "/PutSanPham",
+            templateUrl: "/App/Components/SanPham/SanPhamPutView.html",
+            controller: "PutSanPhamController"
         });
     }
 })();
