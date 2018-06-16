@@ -209,7 +209,9 @@ namespace Nhom8.DataAccess.Models.SanPham
         {
             try
             {
-                db.Entry(MapperBase(obj)).State = EntityState.Modified;
+                Base.SanPham sanPham = MapperBase(obj); 
+                db.Entry(sanPham).State = EntityState.Modified;
+                db.SaveChanges();
                 return true;
             }
             catch
@@ -239,5 +241,6 @@ namespace Nhom8.DataAccess.Models.SanPham
             db.SaveChanges();
             return Mapper(sp);
         }
+
     }
 }

@@ -1,77 +1,74 @@
 ﻿
-//(function (app) {
-//    app.controller('PutSanPhamController', PutSanPhamController);
+(function (app) {
+    app.controller('PutSanPhamController', PutSanPhamController);
 
-//    PutSanPhamController.$inject = ['$scope', 'apiService', 'ThongBaoService'];
+    PutSanPhamController.$inject = ['$scope', 'apiService', 'ThongBaoService','$stateParams'];
 
-//    function PutSanPham($scope, apiService, ThongBaoService) {
+    function PutSanPhamController($scope, apiService, ThongBaoService,$stateParams) {
 
-//        $scope.DanhSachLoaiSanPham = [];
-
-//        $scope.SanPham = null; 
-
-//        LoadSanPhamTheoMa(); 
-
-//        function LoadSanPhamTheoMa() {
-
-//            apiService.get('/api/SanPham?MaSanPham='+SanPham.MaSanPham, null, function (resulte) {
-//                $scope.SanPham = resulte.data;
-//            }, function () {
-//                console.log('Khong load Dươc Loai San Pham');
-//            });
-//        }
+        $scope.DanhSachLoaiSanPham = [];
+        $scope.DanhSachNhaSanXuat = [];
+        $scope.SanPham = null;
 
 
 
+        function LoadSanPhamTheoMa() {
 
-
-//        function LoadDanhSachLoaiSanPham() {
-
-//            apiService.get('/api/LoaiSanPhams', null, function (resulte) {
-//                $scope.DanhSachLoaiSanPham = resulte.data;
-//            }, function () {
-
-//                console.log('Khong load Dươc Loai San Pham');
-//            });
-//        }
-//        LoadDanhSachLoaiSanPham();
-
-//        $scope.DanhSachNhaSanXuat = [];
-
-//        function LoadDanhSachNhaSanXuat() {
-
-//            apiService.get('/api/NhaSanXuats', null, function (resulte) {
-//                $scope.DanhSachNhaSanXuat = resulte.data;
-
-//            }, function () {
-
-//                console.log('Khong load Dươc Nha Sản Xuat');
-//            });
-//        }
-//        LoadDanhSachNhaSanXuat();
-
-//        $scope.AddSanPham = AddSanPham;
-
-
-//        function AddSanPham(SanPham) {
-//            SanPham = $scope.SanPham;
-//            $.ajax({
-//                type: "PUT",
-//                data: JSON.stringify($scope.SanPham),
-//                url: "/api/SanPhams",
-//                dataType: "json",
-//                contentType: "application/json",
-//                success: function (data) {
-//                    ThongBaoService.displaySuccess('Thêm Mới Sản Phâm Thành Công')
-//                },
-//                error: function () {
-//                    ThongBaoService.displayError('Thêm Mới Sản Phẩm Không Thành Công');
-//                }
-//            });
-//        }
+            apiService.get('/api/SanPham?MaSanPham=' + $stateParams.Ma, null, function (resulte) {
+                $scope.SanPham = resulte.data;
+            }, function () {
+                console.log('Khong load Dươc Loai San Pham');
+            });
+        }
+        LoadSanPhamTheoMa(); 
 
 
 
+        function LoadDanhSachLoaiSanPham() {
 
-//    }
-//})(angular.module('MayTinh.SanPham'));
+            apiService.get('/api/LoaiSanPhams', null, function (resulte) {
+                $scope.DanhSachLoaiSanPham = resulte.data;
+            }, function () {
+
+                console.log('Khong load Dươc Loai San Pham');
+            });
+        }
+
+
+
+        function LoadDanhSachNhaSanXuat() {
+
+            apiService.get('/api/NhaSanXuats', null, function (resulte) {
+                $scope.DanhSachNhaSanXuat = resulte.data;
+
+            }, function () {
+
+                console.log('Khong load Dươc Nha Sản Xuat');
+            });
+        }
+
+
+        LoadDanhSachNhaSanXuat();
+        LoadDanhSachLoaiSanPham();
+
+        $scope.UpdateSanPham = UpdateSanPham;
+
+        function UpdateSanPham(SanPham) {
+            $.ajax({
+                url: "/api/SanPham",
+                type: "put",
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify($scope.SanPham),
+                success: function (data) {
+                    ThongBaoService.displaySuccess('cap nhap san pham thanh cong')
+                },
+                error: function () {
+                    ThongBaoService.displayError('cap nhap san pham khong thanh cong');
+                }
+            });
+        }
+    }
+
+
+})(angular.module('MayTinh.SanPham'));

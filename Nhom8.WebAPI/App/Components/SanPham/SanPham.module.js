@@ -20,9 +20,10 @@
         }); 
 
         $stateProvider.state('PutSanPham', {
-            url: "/PutSanPham",
+            url: "/PutSanPham/:Ma",
             templateUrl: "/App/Components/SanPham/SanPhamPutView.html",
             controller: "PutSanPhamController"
         });
+
     }
 })();
