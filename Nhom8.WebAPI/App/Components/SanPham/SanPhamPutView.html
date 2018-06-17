@@ -31,7 +31,7 @@
                     <div class="box-body">
 
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Mã Sản Phẩm</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label" style="text-align:left">Mã Sản Phẩm</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" ng-model="SanPham.MaSanPham" name="MaSanPham">
                             </div>
@@ -39,7 +39,7 @@
 
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Tên Sản Phẩm</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label" style="text-align:left">Tên Sản Phẩm</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" ng-model="SanPham.TenSanPham" name="TenSanPham">
                             </div>
@@ -47,7 +47,7 @@
 
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Số Lượng Tồn</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label" style="text-align:left">Số Lượng Tồn</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" ng-model="SanPham.SoLuongTon" name="SoLuongTon">
                             </div>
@@ -55,14 +55,14 @@
 
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Đơn Giá</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label" style="text-align:left">Đơn Giá</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" ng-model="SanPham.DonGia" name="DonGia">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Loại Sản Phẩm</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label" style="text-align:left">Loại Sản Phẩm</label>
                             <div class="col-sm-10">
                                 <select class="form-control" ng-model="SanPham.MaLoaiSanPham" ng-options="option.MaLoaiSanPham as option.TenLoaiSanPham for option in DanhSachLoaiSanPham ">
 
@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Nhà Sản Xuất</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label" style="text-align:left" >Nhà Sản Xuất</label>
                             <div class="col-sm-10">
                                 <select class="form-control" ng-model="SanPham.MaNhaSanXuat" ng-options="option.MaNhaSanXuat as option.TenNhaSanXuat for option in DanhSachNhaSanXuat ">
                                     <option value="">Chọn Nhà Sản Xuất</option>
@@ -82,14 +82,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Ảnh Bìa</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label" style="text-align:left">Ảnh Bìa</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" ng-model="SanPham.AnhBia" name="AnhBia">
+                                <input type="text" class="form-control" ng-model="SanPham.AnhBia" name="AnhBia">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Mô Tả</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label" style="text-align:left">Mô Tả</label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" ng-model="SanPham.MoTa" name="MoTa">
                             </div>
@@ -103,7 +103,7 @@
                             <div class="col-sm-offset-2 col-sm-10">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" ng-checked="SanPham.HienThi" ng-model="SanPham.HienThi" name="HienThi"> Hiển Thị
+                                        <input type="checkbox" ng-checked="SanPham.HienThi" ng-model="DanhSach.HienThi" name="HienThi"> Hiển Thị
                                     </label>
                                 </div>
                             </div>

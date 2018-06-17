@@ -20,6 +20,21 @@ namespace Nhom8.DataAccess.Models.NhaSanXuat
             };
             return obj;
         }
+
+
+        public Base.NhaSanXuat MapperBase(NhaSanXuat_OBJ obj)
+        {
+            Base.NhaSanXuat item  = new Base.NhaSanXuat()
+            {
+            
+                MaNhaSanXuat = obj.MaNhaSanXuat,
+                TenNhaSanXuat = obj.TenNhaSanXuat,
+                QuocGia = obj.QuocGia,
+                HienThi = obj.HienThi,
+            };
+            return item;
+        }
+
         public IEnumerable<NhaSanXuat_OBJ> HienThiDanhSachNhaSanXuat()
         {
             try
@@ -66,6 +81,68 @@ namespace Nhom8.DataAccess.Models.NhaSanXuat
             {
                 return null;
             }
+        }
+
+
+        public NhaSanXuat_OBJ GetMa(int MaNhaSanXuat)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                var items = (from item in db.NhaSanXuats
+                            where item.MaNhaSanXuat == MaNhaSanXuat
+                            select item).SingleOrDefault(); 
+                return Mapper(items); 
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+
+        public bool ThemMoi(NhaSanXuat_OBJ obj)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                db.NhaSanXuats.Add(MapperBase(obj));
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool CapNhap(NhaSanXuat_OBJ obj)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                Base.NhaSanXuat item = MapperBase(obj);
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public NhaSanXuat_OBJ Xoa(int id)
+        {
+            MayTinhDbContext db = new MayTinhDbContext();
+            Base.NhaSanXuat item = db.NhaSanXuats.Find(id);
+            if (item == null)
+            {
+                return null;
+            }
+            db.NhaSanXuats.Remove(item);
+            db.SaveChanges();
+            return Mapper(item);
         }
     }
 }

@@ -54,7 +54,7 @@
             $.ajax({
                 type: "POST",
                 data: JSON.stringify($scope.SanPham),
-                url: "/api/SanPhams", 
+                url: "/api/SanPham", 
                 dataType:"json", 
                 contentType: "application/json",
                 success: function (data) {

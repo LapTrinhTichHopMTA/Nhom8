@@ -69,97 +69,62 @@ namespace Nhom8.WebAPI.Controllers
         }
 
 
-        // GET: api/NhaSanXuats/5
-        [ResponseType(typeof(NhaSanXuat))]
-        public IHttpActionResult GetNhaSanXuat(int id)
+
+        public IHttpActionResult GetId(int MaNhaSanXuat)
         {
-            NhaSanXuat nhaSanXuat = db.NhaSanXuats.Find(id);
-            if (nhaSanXuat == null)
+            NhaSanXuat_BUS bus = new NhaSanXuat_BUS();
+
+            if (bus.GetMa(MaNhaSanXuat) == null)
             {
                 return NotFound();
             }
 
-            return Ok(nhaSanXuat);
+            return Ok(bus.GetMa(MaNhaSanXuat));
         }
 
-        // PUT: api/NhaSanXuats/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutNhaSanXuat(int id, NhaSanXuat nhaSanXuat)
+
+
+        [HttpPost]
+        public void PostSanPham([FromBody]NhaSanXuat_OBJ obj)
+        {
+            if (!ModelState.IsValid)
+            {
+                return;
+            }
+            NhaSanXuat_BUS bus = new NhaSanXuat_BUS();
+            bus.ThemMoi(obj);
+        }
+
+
+        [HttpPut]
+        public IHttpActionResult PutSanPham([FromBody]NhaSanXuat_OBJ obj)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            if (id != nhaSanXuat.MaNhaSanXuat)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(nhaSanXuat).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!NhaSanXuatExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            NhaSanXuat_BUS bus = new NhaSanXuat_BUS();
+            bus.CapNhap(obj);
 
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/NhaSanXuats
-        [ResponseType(typeof(NhaSanXuat))]
-        public IHttpActionResult PostNhaSanXuat(NhaSanXuat nhaSanXuat)
+        [HttpDelete]
+        public IHttpActionResult Delete(int MaNhaSanXuat)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
-            db.NhaSanXuats.Add(nhaSanXuat);
-            db.SaveChanges();
+            NhaSanXuat_BUS bus = new NhaSanXuat_BUS();
 
-            return CreatedAtRoute("DefaultApi", new { id = nhaSanXuat.MaNhaSanXuat }, nhaSanXuat);
-        }
-
-        // DELETE: api/NhaSanXuats/5
-        [ResponseType(typeof(NhaSanXuat))]
-        public IHttpActionResult DeleteNhaSanXuat(int id)
-        {
-            NhaSanXuat nhaSanXuat = db.NhaSanXuats.Find(id);
-            if (nhaSanXuat == null)
+            if (bus.Xoa(MaNhaSanXuat) == null)
             {
                 return NotFound();
             }
-
-            db.NhaSanXuats.Remove(nhaSanXuat);
-            db.SaveChanges();
-
-            return Ok(nhaSanXuat);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
+            else
             {
-                db.Dispose();
+                return Ok(bus.Xoa(MaNhaSanXuat));
+
             }
-            base.Dispose(disposing);
         }
 
-        private bool NhaSanXuatExists(int id)
-        {
-            return db.NhaSanXuats.Count(e => e.MaNhaSanXuat == id) > 0;
-        }
     }
 }

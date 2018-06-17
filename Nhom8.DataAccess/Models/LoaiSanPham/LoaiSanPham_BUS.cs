@@ -24,6 +24,21 @@ namespace Nhom8.DataAccess.Models.LoaiSanPham
             return obj;
         }
 
+        public  Base.LoaiSanPham MapperBase(LoaiSanPham_OBJ obj)
+        {
+
+            Base.LoaiSanPham item = new Base.LoaiSanPham()
+            {
+                MaLoaiSanPham = obj.MaLoaiSanPham,
+                TenLoaiSanPham = obj.TenLoaiSanPham,
+                DonViTinh = obj.DonViTinh,
+                AnhBia = obj.AnhBia,
+                HienThi = obj.HienThi,
+                GhiChu = obj.GhiChu
+            };
+            return item;
+        }
+
         public IEnumerable<LoaiSanPham_OBJ> HienThiDanhSachLoaiSanPham()
         {
             try
@@ -70,6 +85,67 @@ namespace Nhom8.DataAccess.Models.LoaiSanPham
             {
                 return null;
             }
+        }
+
+        public LoaiSanPham_OBJ GetMa(int MaLoaiSanPham)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                var items = (from item in db.LoaiSanPhams
+                             where item.MaLoaiSanPham == MaLoaiSanPham
+                             select item).SingleOrDefault();
+                return Mapper(items);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+
+        public bool ThemMoi(LoaiSanPham_OBJ obj)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                db.LoaiSanPhams.Add(MapperBase(obj));
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool CapNhap(LoaiSanPham_OBJ obj)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                Base.LoaiSanPham item = MapperBase(obj);
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public LoaiSanPham_OBJ Xoa(int id)
+        {
+            MayTinhDbContext db = new MayTinhDbContext();
+            Base.LoaiSanPham item = db.LoaiSanPhams.Find(id);
+            if (item == null)
+            {
+                return null;
+            }
+            db.LoaiSanPhams.Remove(item);
+            db.SaveChanges();
+            return Mapper(item);
         }
     }
 }

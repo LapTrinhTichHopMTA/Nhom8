@@ -210,7 +210,6 @@
     <Compile Include="Controllers\NhanViensController.cs" />
     <Compile Include="Controllers\NhaSanXuatsController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
-    <Compile Include="Controllers\SanPhamsController.cs" />
     <Compile Include="Controllers\TaiKhoansController.cs" />
     <Compile Include="Controllers\ThongSoKyThuatsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

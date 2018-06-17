@@ -53,4 +53,3 @@ D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.C
 D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csproj.CopyComplete
 D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.dll
 D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.pdb
-D:\Lap Trinh Tich Hop Ban 2\Nhom8.DataAccess\obj\Debug\Nhom8.DataAccess.csprojResolveAssemblyReference.cache

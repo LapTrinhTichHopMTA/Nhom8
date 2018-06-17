@@ -8,5 +8,7 @@ namespace Nhom8.DataAccess.Models.NhanVien
 {
     class NhanVien_BUS
     {
+
+
     }
 }

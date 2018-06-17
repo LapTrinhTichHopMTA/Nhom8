@@ -1,8 +1,8 @@
 ﻿(function(app){
     app.controller('LoaiSanPhamListController', LoaiSanPhamListController);
-    LoaiSanPhamListController.$inject = ['$scope', 'apiService'];
+    LoaiSanPhamListController.$inject = ['$scope', 'apiService','ThongBaoService'];
 
-    function LoaiSanPhamListController($scope, apiService) {
+    function LoaiSanPhamListController($scope, apiService, ThongBaoService) {
 
         $scope.list = [];
         $scope.getlist = getlist;
@@ -41,6 +41,25 @@
             })
         }
         $scope.getlist();
+
+
+        $scope.DelNhaSanXuat = DelNhaSanXuat; 
+
+        function DelNhaSanXuat(MaNhaSanXuat) {
+            var chuoiketnoi = 'http://localhost:51208/api/sanpham?MaSanPham=' + MaSanPham;
+
+            $.ajax({
+                url: chuoiketnoi,
+                type: "delete",
+                success: function (data) {
+                    ThongBaoService.displaySuccess('Xóa Sản Phâm Thành Công');
+                    getlist();
+                },
+                error: function () {
+                    ThongBaoService.displayError('cap nhap san pham khong thanh cong');
+                }
+            });
+        }
 
     }
 })(angular.module('MayTinh.LoaiSanPham'));

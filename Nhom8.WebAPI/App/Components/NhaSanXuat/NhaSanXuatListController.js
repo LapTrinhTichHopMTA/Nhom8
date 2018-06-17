@@ -1,8 +1,8 @@
 ﻿(function (app) {
     app.controller('NhaSanXuatListController', NhaSanXuatListController);
-    NhaSanXuatListController.$inject = ['$scope', 'apiService'];
+    NhaSanXuatListController.$inject = ['$scope', 'apiService','ThongBaoService'];
 
-    function NhaSanXuatListController($scope, apiService) {
+    function NhaSanXuatListController($scope, apiService, ThongBaoService) {
 
         $scope.list = [];
         $scope.getlist = getlist;
@@ -20,8 +20,8 @@
             keyword = keyword || null;
             var chuoiketnoi = '';
 
-            var chuoiketnoi1 = 'http://localhost:51208/api/nhasanxuats?trang=' + page + '&SoBanGhi=1&TuKhoa=' + $scope.keyword;
-            var chuoiketnoi2 = 'http://localhost:51208/api/nhasanxuats?trang=' + page + '&SoBanGhi=1'
+            var chuoiketnoi1 = 'http://localhost:51208/api/nhasanxuats?trang=' + page + '&SoBanGhi=10&TuKhoa=' + $scope.keyword;
+            var chuoiketnoi2 = 'http://localhost:51208/api/nhasanxuats?trang=' + page + '&SoBanGhi=10'
 
 
             if ($scope.keyword == null) {
@@ -41,6 +41,24 @@
             })
         }
         $scope.getlist();
+
+        $scope.DelNhaSanXuat = DelNhaSanXuat;
+
+        function DelNhaSanXuat(MaNhaSanXuat) {
+            var chuoiketnoi = 'http://localhost:51208/api/NhaSanXuats?MaNhaSanXuat=' + MaNhaSanXuat;
+
+            $.ajax({
+                url: chuoiketnoi,
+                type: "delete",
+                success: function (data) {
+                    ThongBaoService.displaySuccess('Xóa Sản Phâm Thành Công');
+                    search();
+                },
+                error: function () {
+                    ThongBaoService.displayError('cap nhap san pham khong thanh cong');
+                }
+            });
+        }
 
     }
 })(angular.module('MayTinh.NhaSanXuat'));

@@ -25,7 +25,6 @@ namespace Nhom8.WebAPI.Controllers
             return bus.HienThiDanhSachLoaiSanPham(); 
         }
 
-        // GET: api/LoaiSanPhams
         public PhanTrang<LoaiSanPham_OBJ> GetAll(int trang, int SoBanGhi)
         {
             LoaiSanPham_BUS bus = new LoaiSanPham_BUS();
@@ -47,7 +46,7 @@ namespace Nhom8.WebAPI.Controllers
             return PhanTrang;
         }
 
-        // GET: api/LoaiSanPhams
+  
         public PhanTrang<LoaiSanPham_OBJ> GetAll(int trang, int SoBanGhi, string TuKhoa)
         {
             LoaiSanPham_BUS bus = new LoaiSanPham_BUS();
@@ -69,94 +68,60 @@ namespace Nhom8.WebAPI.Controllers
         }
 
 
-
-        // GET: api/LoaiSanPhams/5
-        [ResponseType(typeof(LoaiSanPham))]
-        public IHttpActionResult GetLoaiSanPham(int id)
+        public IHttpActionResult GetId(int MaLoaiSanPham)
         {
-            LoaiSanPham loaiSanPham = db.LoaiSanPhams.Find(id);
-            if (loaiSanPham == null)
+            LoaiSanPham_BUS bus = new LoaiSanPham_BUS();
+
+            if (bus.GetMa(MaLoaiSanPham) == null)
             {
                 return NotFound();
             }
 
-            return Ok(loaiSanPham);
+            return Ok(bus.GetMa(MaLoaiSanPham));
         }
 
-        // PUT: api/LoaiSanPhams/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutLoaiSanPham(int id, LoaiSanPham loaiSanPham)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
-            if (id != loaiSanPham.MaLoaiSanPham)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(loaiSanPham).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!LoaiSanPhamExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
 
         [HttpPost]
-        public void LoaiSanPham([FromBody]LoaiSanPham loaiSanPham)
+        public void PostSanPham([FromBody]LoaiSanPham_OBJ obj)
         {
             if (!ModelState.IsValid)
             {
                 return;
             }
-            db.LoaiSanPhams.Add(loaiSanPham);
-            db.SaveChanges();
+            LoaiSanPham_BUS bus = new LoaiSanPham_BUS();
+            bus.ThemMoi(obj);
         }
 
-        // DELETE: api/LoaiSanPhams/5
-        [ResponseType(typeof(LoaiSanPham))]
-        public IHttpActionResult DeleteLoaiSanPham(int Ma)
+
+        [HttpPut]
+        public IHttpActionResult PutSanPham([FromBody]LoaiSanPham_OBJ obj)
         {
-            LoaiSanPham loaiSanPham = db.LoaiSanPhams.Find(Ma);
-            if (loaiSanPham == null)
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            LoaiSanPham_BUS bus = new LoaiSanPham_BUS();
+            bus.CapNhap(obj);
+
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
+        [HttpDelete]
+        public IHttpActionResult Delete(int MaLoaiSanPham)
+        {
+
+            LoaiSanPham_BUS bus = new LoaiSanPham_BUS();
+
+            if (bus.Xoa(MaLoaiSanPham) == null)
             {
                 return NotFound();
             }
-
-            db.LoaiSanPhams.Remove(loaiSanPham);
-            db.SaveChanges();
-
-            return Ok(loaiSanPham);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
+            else
             {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+                return Ok(bus.Xoa(MaLoaiSanPham));
 
-        private bool LoaiSanPhamExists(int id)
-        {
-            return db.LoaiSanPhams.Count(e => e.MaLoaiSanPham == id) > 0;
+            }
         }
     }
 }

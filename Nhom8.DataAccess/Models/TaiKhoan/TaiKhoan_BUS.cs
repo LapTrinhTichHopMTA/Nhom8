@@ -27,6 +27,26 @@ namespace Nhom8.DataAccess.Models.TaiKhoan
             };
             return obj;
         }
+
+
+        public Base.TaiKhoan MapperBase(TaiKhoan_OBJ obj)
+        {
+            Base.TaiKhoan item = new Base.TaiKhoan()
+            {
+                TenTaiKhoan = obj.TenTaiKhoan,
+                TenNguoiDung = obj.TenNguoiDung,
+                MatKhau = obj.MatKhau,
+                HienThi = obj.HienThi,
+                NgayTao = obj.NgayTao,
+                NgayCapNhap = obj.NgayCapNhap,
+                DiaChi = obj.DiaChi,
+                DienThoai = obj.DienThoai,
+                GioiTinh = obj.GioiTinh,
+                MaNguoiDung = obj.MaNguoiDung,
+                NgaySinh = obj.NgaySinh,
+            };
+            return item;
+        }
         public IEnumerable<TaiKhoan_OBJ> HienThiDanhSachTaiKhoan()
         {
             try
@@ -76,6 +96,67 @@ namespace Nhom8.DataAccess.Models.TaiKhoan
             {
                 return null;
             }
+        }
+
+        public TaiKhoan_OBJ GetMa(string TenTaiKhoan)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                var items = (from item in db.TaiKhoans
+                             where item.TenTaiKhoan == TenTaiKhoan
+                             select item).SingleOrDefault();
+                return Mapper(items);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+
+        public bool ThemMoi(TaiKhoan_OBJ obj)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                db.TaiKhoans.Add(MapperBase(obj));
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool CapNhap(TaiKhoan_OBJ obj)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                Base.TaiKhoan item = MapperBase(obj);
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public TaiKhoan_OBJ Xoa(string TenTaiKhoan)
+        {
+            MayTinhDbContext db = new MayTinhDbContext();
+            Base.TaiKhoan item = db.TaiKhoans.Find(TenTaiKhoan);
+            if (item == null)
+            {
+                return null;
+            }
+            db.TaiKhoans.Remove(item);
+            db.SaveChanges();
+            return Mapper(item);
         }
     }
 }

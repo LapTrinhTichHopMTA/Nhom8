@@ -111,7 +111,7 @@ namespace Nhom8.WebAPI.Controllers
             return PhanTrang;
         }
 
-        //[Route("getall")]
+       
         public PhanTrang<SanPham_OBJ> GetAlls(int trang, int SoBanGhi, int MaLoaiSanPham, int MaNhaSanXuat)
         {
             int DoDaiDanhSach = 0;

@@ -30,6 +30,27 @@ namespace Nhom8.DataAccess.Models.ThongSoKyThuat
             }; 
             return obj; 
         }
+
+
+        public Base.ThongSoKyThuat  MapperBase(ThongSoKyThuat_OBJ obj)
+        {
+            SanPham.SanPham_BUS bus = new SanPham.SanPham_BUS();
+            Base.ThongSoKyThuat item = new Base.ThongSoKyThuat()
+            {
+                MaMay = obj.MaMay,
+                MaSanPham = obj.MaSanPham,
+                CacManHinh = obj.CacManHinh,
+                CongKetNoi = obj.CongKetNoi,
+                KichThuoc = obj.KichThuoc,
+                HeDieuHanh = obj.HeDieuHanh,
+                CPU = obj.CPU,
+                ManHinh = obj.ManHinh,
+                HienThi = obj.HienThi,
+                Ram = obj.Ram,
+                OCung = obj.OCung,
+            };
+            return item;
+        }
         public IEnumerable<ThongSoKyThuat_OBJ> HienThiThongSoKyThuat()
         {
             try
@@ -72,6 +93,75 @@ namespace Nhom8.DataAccess.Models.ThongSoKyThuat
             {
                 return null;
             }
+        }
+
+
+
+        public ThongSoKyThuat_OBJ GetMa(int MaSanPham, int MaMay)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                var items = (from item in db.ThongSoKyThuats
+                             where item.MaSanPham == MaSanPham && item.MaMay == MaMay
+                             select item).SingleOrDefault();
+                return Mapper(items);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        
+
+        public bool ThemMoi(ThongSoKyThuat_OBJ obj)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                db.ThongSoKyThuats.Add(MapperBase(obj));
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool CapNhap(ThongSoKyThuat_OBJ obj)
+        {
+            try
+            {
+                MayTinhDbContext db = new MayTinhDbContext();
+                Base.ThongSoKyThuat item = MapperBase(obj);
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+      
+        public ThongSoKyThuat_OBJ Xoa(int MaSanPham, int MaMay)
+        {
+            MayTinhDbContext db = new MayTinhDbContext();
+            Base.ThongSoKyThuat item = (
+                from items in db.ThongSoKyThuats
+                where items.MaSanPham == MaSanPham && items.MaMay == MaMay
+                select items).SingleOrDefault();
+
+            if (item == null)
+            {
+                return null;
+            }
+            db.ThongSoKyThuats.Remove(item);
+            db.SaveChanges();
+            return Mapper(item);
         }
     }
 }

@@ -220,16 +220,6 @@ namespace Nhom8.DataAccess.Models.SanPham
             }
         }
 
-        public void save()
-        {
-            db.SaveChanges();
-        }
-
-        public bool SanPhamExists(int id)
-        {
-            return db.SanPhams.Count(e => e.MaLoaiSanPham == id) > 0;
-        }
-
         public SanPham_OBJ XoaSanPham(int id)
         {
             Base.SanPham sp = db.SanPhams.Find(id);
@@ -240,6 +230,16 @@ namespace Nhom8.DataAccess.Models.SanPham
             db.SanPhams.Remove(sp);
             db.SaveChanges();
             return Mapper(sp);
+        }
+
+        public void save()
+        {
+            db.SaveChanges();
+        }
+
+        public bool SanPhamExists(int id)
+        {
+            return db.SanPhams.Count(e => e.MaLoaiSanPham == id) > 0;
         }
 
     }

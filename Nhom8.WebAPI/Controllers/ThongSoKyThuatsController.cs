@@ -71,112 +71,60 @@ namespace Nhom8.WebAPI.Controllers
 
 
 
-        // GET: api/ThongSoKyThuats/5
-        [ResponseType(typeof(ThongSoKyThuat))]
-        public IHttpActionResult GetThongSoKyThuat(int id)
+        public IHttpActionResult GetId(int MaSanPham, int MaMay)
         {
-            ThongSoKyThuat thongSoKyThuat = db.ThongSoKyThuats.Find(id);
-            if (thongSoKyThuat == null)
+            ThongSoKyThuat_BUS bus = new ThongSoKyThuat_BUS();
+
+            if (bus.GetMa(MaSanPham,MaMay) == null)
             {
                 return NotFound();
             }
 
-            return Ok(thongSoKyThuat);
+            return Ok(bus.GetMa(MaSanPham, MaMay));
         }
 
-        // PUT: api/ThongSoKyThuats/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutThongSoKyThuat(int id, ThongSoKyThuat thongSoKyThuat)
+
+
+        [HttpPost]
+        public void PostSanPham([FromBody]ThongSoKyThuat_OBJ obj)
+        {
+            if (!ModelState.IsValid)
+            {
+                return;
+            }
+            ThongSoKyThuat_BUS bus = new ThongSoKyThuat_BUS();
+            bus.ThemMoi(obj);
+        }
+
+
+        [HttpPut]
+        public IHttpActionResult PutSanPham([FromBody]ThongSoKyThuat_OBJ obj)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            if (id != thongSoKyThuat.MaMay)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(thongSoKyThuat).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ThongSoKyThuatExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            ThongSoKyThuat_BUS bus = new ThongSoKyThuat_BUS();
+            bus.CapNhap(obj);
 
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/ThongSoKyThuats
-        [ResponseType(typeof(ThongSoKyThuat))]
-        public IHttpActionResult PostThongSoKyThuat(ThongSoKyThuat thongSoKyThuat)
+        [HttpDelete]
+        public IHttpActionResult Delete(int MaSanPham, int MaMay)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
-            db.ThongSoKyThuats.Add(thongSoKyThuat);
+            ThongSoKyThuat_BUS bus = new ThongSoKyThuat_BUS();
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (ThongSoKyThuatExists(thongSoKyThuat.MaMay))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtRoute("DefaultApi", new { id = thongSoKyThuat.MaMay }, thongSoKyThuat);
-        }
-
-        // DELETE: api/ThongSoKyThuats/5
-        [ResponseType(typeof(ThongSoKyThuat))]
-        public IHttpActionResult DeleteThongSoKyThuat(int id)
-        {
-            ThongSoKyThuat thongSoKyThuat = db.ThongSoKyThuats.Find(id);
-            if (thongSoKyThuat == null)
+            if (bus.Xoa(MaSanPham, MaMay) == null)
             {
                 return NotFound();
             }
-
-            db.ThongSoKyThuats.Remove(thongSoKyThuat);
-            db.SaveChanges();
-
-            return Ok(thongSoKyThuat);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
+            else
             {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+                return Ok(bus.Xoa(MaSanPham, MaMay));
 
-        private bool ThongSoKyThuatExists(int id)
-        {
-            return db.ThongSoKyThuats.Count(e => e.MaMay == id) > 0;
+            }
         }
     }
 }
